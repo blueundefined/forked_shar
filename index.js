@@ -5,7 +5,7 @@ const LOG_DATA = {
     password: "_uШFrэаcкjbF"
 }
 
-async function main(){
+async function main() {
     const cookie = await Shara.login(LOG_DATA.nick, LOG_DATA.password)
 
     const clearCookie = cookie[1].split(/[\;|\,]\s/gi).filter(e => e.startsWith("_shtm") || e.startsWith("SessionId") || e.startsWith("LoginCookieKey")).join("; ")
